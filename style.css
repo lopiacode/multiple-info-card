@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto, consolas, monospace, sans-serif;
+}
+.card {
+    position: relative;
+    width: 300px;
+    height: 475px;
+}
+.main {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#00a0fa, #005685);
+    border-radius: 50px 50px 200px 200px;
+    padding: 15px;
+    color: #fff;
+    overflow: hidden;
+}
+.slides {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    transition: transform .5s;
+}
+.slide {
+    min-width: 100%;
+    text-align: center;
+}
+.slied p { margin-top: 10px; }
+.start {
+    display: block;
+    color: #404040;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+    font-size: 30px;
+    background: #fff;
+    padding: 10px;
+    width: 65%;
+    border-radius: 20px 20px 50px 50px;
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+}
+.link {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    transform-origin: 225px;
+    left: -75px;
+    bottom: 125px;
+    cursor: pointer;
+    z-index: 2;
+}
+.link img {
+    width: 100%;
+    height: 100%;
+    filter: invert(.9);
+    transition: filter .5s;
+}
+.link:nth-child(1) { transform: rotateZ(calc((-180deg / 4) * 1 + 45deg)) }
+.link:nth-child(2) { transform: rotateZ(calc((-180deg / 4) * 2 + 45deg)) }
+.link:nth-child(3) { transform: rotateZ(calc((-180deg / 4) * 3 + 45deg)) }
+.link:nth-child(4) { transform: rotateZ(calc((-180deg / 4) * 4 + 45deg)) }
+.link:nth-child(5) { transform: rotateZ(calc((-180deg / 4) * 5 + 45deg)) }
+.link:nth-child(1) img { transform: rotateZ(calc((180deg / 4) * 1 - 45deg)); filter: invert(0); }
+.link:nth-child(2) img { transform: rotateZ(calc((180deg / 4) * 2 - 45deg)) }
+.link:nth-child(3) img { transform: rotateZ(calc((180deg / 4) * 3 - 45deg)) }
+.link:nth-child(4) img { transform: rotateZ(calc((180deg / 4) * 4 - 45deg)) }
+.link:nth-child(5) img { transform: rotateZ(calc((180deg / 4) * 5 - 45deg)) }
+.marker {
+    background: linear-gradient(#00a0fa, #005685);
+    z-index: 1;
+    border-radius: 50%;
+    padding: 5px;
+    box-sizing: content-box;
+    transform-origin: 230px;
+    left: -80px;
+    bottom: 120px;
+    transition: transform .5s;
+}
